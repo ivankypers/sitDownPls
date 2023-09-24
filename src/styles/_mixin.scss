@@ -1,0 +1,11 @@
+@import "variables";
+
+@mixin container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+}
+
+@mixin flexBox {
+  display: flex;
+  align-items: center;
+}

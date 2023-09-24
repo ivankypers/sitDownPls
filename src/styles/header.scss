@@ -1,0 +1,63 @@
+@import "settings";
+@import "variables";
+@import "mixin";
+
+.header__upper {
+  @include flexBox;
+  justify-content: space-between;
+  padding: 14px 0;
+
+  .header__upper-geo {
+    @include flexBox;
+
+    .header__upper-region {
+      color: $colorBlack;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+      margin-right: 30px;
+
+      & span {
+        color: $colorPurple;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 19.2px */
+      }
+    }
+
+    .header__upper-phone {
+      @include flexBox;
+      color: $colorOrange;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+
+      & img {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .header__upper-nav {
+    .header__upper-nav__list {
+      @include flexBox;
+
+      .header__upper-nav__item {
+        &:not(:last-child) {
+          margin-right: 64px;
+        }
+      }
+
+      .header__upper-nav__link {
+        color: $colorGrey;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 14px */
+      }
+
+  }
+
+  }
+}
