@@ -1,3 +1,5 @@
+@import "mixin";
+@import "variables";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -375,4 +377,8 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.container {
+  @include container
 }

@@ -1,0 +1,55 @@
+@import "variables";
+
+.choices[data-type*=select-one]::after {
+  content: "";
+  border-color: $colorPurple transparent transparent;
+  border-width: 5px;
+  top: 55%;
+  right: 8.5px;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  border-color: transparent transparent $colorPurple;
+}
+
+.choices__list--single {
+  padding: 2px 16px 4px 4px;
+}
+
+.choices[data-type*=select-one] {
+
+  .choices__inner {
+    padding-bottom: 3px;
+    border: none;
+    background: none;
+    min-height: initial;
+
+    .choices__item {
+      color: $colorPurple;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+    }
+  }
+
+}
+
+.choices__item {
+  color: $colorBlack;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+}
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+   padding-right: 0;
+}
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  min-width: 84px;
+}

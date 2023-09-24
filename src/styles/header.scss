@@ -1,16 +1,21 @@
-@import "settings";
 @import "variables";
 @import "mixin";
 
 .header__upper {
-  @include flexBox;
   justify-content: space-between;
   padding: 14px 0;
+  background-color: $colorGreyLight;
+
+  .container {
+    @include flexBox;
+    justify-content: space-between;
+  }
 
   .header__upper-geo {
     @include flexBox;
 
     .header__upper-region {
+      @include flexBox;
       color: $colorBlack;
       font-size: 16px;
       font-weight: 400;
@@ -56,8 +61,35 @@
         font-weight: 400;
         line-height: 100%; /* 14px */
       }
+    }
+  }
+}
 
+.header__middle {
+  padding: 36px 0;
+
+  .container {
+    @include flexBox;
+    justify-content: space-between;
   }
 
+  .header__middle-nav {
+    .header__middle-nav__list {
+      @include flexBox;
+
+      .header__middle-nav__item {
+        &:not(:last-child) {
+          margin-right: 91px;
+        }
+      }
+
+      .header__middle-nav__link {
+        color: $colorBlack;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
   }
+
 }

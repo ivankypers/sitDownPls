@@ -1,9 +1,7 @@
 @import "settings";
 @import "mixin";
 @import "variables";
+@import "choices";
 @import "header";
 
-.container {
-  @include container
-}
 

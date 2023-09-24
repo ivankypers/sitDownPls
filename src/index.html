@@ -5,28 +5,55 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="choices.min.css">
     <link rel="stylesheet" href="main.css">
+    <script defer src="app.js"></script>
+    <script defer src="app-lib.js"></script>
     <title>SitDownPls</title>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header__upper">
-                <div class="header__upper-geo">
-                    <div class="header__upper-region">Ваш регион: <span>Москва</span></div>
-                    <a href="tel:+74958854547" class="header__upper-phone"><img src="images/mdi_call.svg" alt=""
-                                                                                class="header__upper-phone__img"> +7 (495) 885-45-47</a>
+        <div class="header__upper">
+                <div class="container">
+                    <div class="header__upper-geo">
+                        <label class="header__upper-region">Ваш регион:
+                            <select name="region" id="headerRegion">
+                                <option>Москва</option>
+                                <option>Краснодар</option>
+                                <option>Тула</option>
+                            </select>
+                        </label>
+                        <a href="tel:+74958854547" class="header__upper-phone"><img src="images/mdi_call.svg" alt=""
+                                                                                    class="header__upper-phone__img"> +7 (495) 885-45-47</a>
 
+                    </div>
+                    <nav class="header__upper-nav">
+                        <ul class="header__upper-nav__list">
+                            <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">О компании</a> </li>
+                            <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">Гарантия и возврат</a> </li>
+                            <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">Корпоративным клиентам</a></li>
+                            <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">Дизайн-решение</a> </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="header__upper-nav">
-                    <ul class="header__upper-nav__list">
-                        <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">О компании</a> </li>
-                        <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">Гарантия и возврат</a> </li>
-                        <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">Корпоративным клиентам</a></li>
-                        <li class="header__upper-nav__item"><a href="#" class="header__upper-nav__link">Дизайн-решение</a> </li>
+            </div>
+        <div class="header__middle">
+            <div class="container">
+                <img src="images/logo.png" alt="SitDownPls" class="header__middle-logo">
+                <nav class="header__middle-nav">
+                    <ul class="header__middle-nav__list">
+                        <li class="header__middle-nav__item"><a href="#" class="header__middle-nav__link">Каталог</a> </li>
+                        <li class="header__middle-nav__item"><a href="#" class="header__middle-nav__link">Магазины</a> </li>
+                        <li class="header__middle-nav__item"><a href="#" class="header__middle-nav__link">Шоу-рум</a></li>
+                        <li class="header__middle-nav__item"><a href="#" class="header__middle-nav__link">Доставка и оплата</a> </li>
+                        <li class="header__middle-nav__item"><a href="#" class="header__middle-nav__link">Дисконт</a> </li>
+                        <li class="header__middle-nav__item"><a href="#" class="header__middle-nav__link">Контакты</a> </li>
                     </ul>
                 </nav>
             </div>
+        </div>
+        <div class="header__bottom">
+
         </div>
     </header>
 </body>
