@@ -42,6 +42,7 @@
 
 .special {
   padding: 70px 0;
+  overflow-x: hidden;
 
   .special__title {
     @include sectionTitle;
