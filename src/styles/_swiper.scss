@@ -2,25 +2,69 @@
 @import "mixin";
 
 .hero__swiper {
-  z-index: -1;
   @include absoluteBlock;
   width: 100%;
   height: 100%;
   overflow: hidden;
 
   .swiper-slide {
+    position: relative;
     width: 100%;
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
+
+    .hero__title-white {
+      color: $colorWhite;
+    }
 
     & img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+
     }
+  }
+
+}
+
+.special__swiper {
+  position: relative;
+
+
+  .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: -50px;
+    transform: rotate(180deg);
+
+
+
+  }
+  .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    content: '';
+    position: absolute;
+    right: 47px;
+    top: -50px;
+
 
   }
 
+  .swiper-button__available {
+    & svg {
+      circle {
+        stroke: $colorPurple;
+      }
+      path {
+        stroke: $colorPurple;
+      }
+    }
+  }
 }

@@ -19,3 +19,35 @@
   right: 0;
   left: 0;
 }
+
+@mixin productCard {
+  border-radius: 10px;
+  background: $colorGreyLight;
+  padding: 72px 30px 30px 30px;
+}
+
+@mixin productBtn {
+  border-radius: 10px;
+  border: 2px solid $colorPurple;
+  background: transparent;
+  color: $colorPurple;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+  padding: 19px 35px;
+}
+
+@mixin productTitle {
+  color: $colorBlack;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%; /* 31.2px */
+}
+
+@mixin sectionTitle {
+  color: $colorBlack;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%; /* 32px */
+}

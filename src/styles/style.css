@@ -417,6 +417,9 @@ a {
   font-weight: 400;
   line-height: 130%; /* 18.2px */
 }
+.header__bottom-search .choices__list--dropdown, .header__bottom-search .choices__list[aria-expanded] {
+  z-index: 5;
+}
 .header__bottom-search .choices__list--dropdown .choices__list, .header__bottom-search .choices__list[aria-expanded] .choices__list {
   overflow: hidden;
   overflow-y: auto;
@@ -429,7 +432,6 @@ a {
 }
 
 .hero__swiper {
-  z-index: -1;
   content: "";
   position: absolute;
   top: 0;
@@ -441,16 +443,47 @@ a {
   overflow: hidden;
 }
 .hero__swiper .swiper-slide {
+  position: relative;
   width: 100%;
   height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.hero__swiper .swiper-slide .hero__title-white {
+  color: #FFFFFF;
 }
 .hero__swiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.special__swiper {
+  position: relative;
+}
+.special__swiper .swiper-button-next {
+  width: 32px;
+  height: 32px;
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: -50px;
+  transform: rotate(180deg);
+}
+.special__swiper .swiper-button-prev {
+  width: 32px;
+  height: 32px;
+  content: "";
+  position: absolute;
+  right: 47px;
+  top: -50px;
+}
+.special__swiper .swiper-button__available svg circle {
+  stroke: #A65CF0;
+}
+.special__swiper .swiper-button__available svg path {
+  stroke: #A65CF0;
 }
 
 .header__upper {
@@ -574,6 +607,11 @@ a {
   height: 400px;
   padding: 80px 0;
 }
+.hero .hero__slide-text {
+  position: absolute;
+  top: 80px;
+  left: 16.67%;
+}
 .hero .hero__title {
   max-width: 496px;
   color: #999999;
@@ -593,6 +631,95 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 16px */
+}
+
+.special {
+  padding: 70px 0;
+}
+.special .special__title {
+  color: #333333;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%; /* 32px */
+  margin-bottom: 26px;
+}
+.special .special__card-wrap {
+  display: flex;
+}
+.special .special__card-wrap .special__card {
+  border-radius: 10px;
+  background: #F6F6F6;
+  padding: 72px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: calc((100% - 64px) / 4);
+}
+.special .special__card-wrap .special__card:not(:last-child) {
+  margin-right: 32px;
+}
+.special .special__card-wrap .special__card .special__card-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 34px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-image: url("images/discountbg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+}
+.special .special__card-wrap .special__card .special__card-img {
+  align-self: center;
+  margin-bottom: 16px;
+}
+.special .special__card-wrap .special__card .special__card-title {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%; /* 31.2px */
+  margin-bottom: 23px;
+}
+.special .special__card-wrap .special__card .special__card-prices {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.special .special__card-wrap .special__card .special__card-prices .special__card-discount {
+  color: #FF862F;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  margin-right: 30px;
+}
+.special .special__card-wrap .special__card .special__card-prices .special__card-price {
+  text-decoration: line-through black;
+}
+.special .special__card-wrap .special__card .special__card-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.special .special__card-wrap .special__card .special__card-btn-wrap .special__card-btn {
+  border-radius: 10px;
+  border: 2px solid #A65CF0;
+  background: transparent;
+  color: #A65CF0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+  padding: 19px 35px;
+}
+.special .special__card-wrap .special__card-exp {
+  width: calc((100% - 32px) / 2);
 }
 
 /*# sourceMappingURL=style.css.map */

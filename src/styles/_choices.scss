@@ -99,6 +99,10 @@
     line-height: 130%; /* 18.2px */
   }
 
+  .choices__list--dropdown, .choices__list[aria-expanded] {
+    z-index: 5;
+  }
+
   .choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
     overflow: hidden;
     overflow-y: auto;
