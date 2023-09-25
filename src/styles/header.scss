@@ -93,3 +93,47 @@
   }
 
 }
+
+.header__bottom {
+  padding-bottom: 32px;
+
+  .container {
+    @include flexBox;
+    justify-content: space-between;
+  }
+
+  .header__bottom-search {
+    @include flexBox;
+
+
+    .header__bottom-search__label {
+      @include flexBox;
+      justify-content: space-between;
+      padding: 14px 32px;
+
+      width: 731px;
+      height: 100%;
+      border-radius: 10px 0 0 10px;
+      background: $colorGreyLight;
+
+      .header__bottom-searchbar {
+        border: none;
+        background: transparent;
+      }
+    }
+
+    .header__bottom-search__btn {
+      border: none;
+      background: none;
+    }
+
+  }
+
+  .header__bottom-personal {
+    @include flexBox;
+
+    .header__bottom-personal-link {
+      margin-right: 32px;
+    }
+  }
+}

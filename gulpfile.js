@@ -50,7 +50,7 @@ const styles = () => {
 const scripts = () => {
     return src([
         'src/js/components/**/*.js',
-        'src/js/main.js'
+        'src/js/*.js'
     ])
         .pipe(development(sourcemaps.init()))
         .pipe(babel({

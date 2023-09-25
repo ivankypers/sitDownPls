@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixin";
+
+.hero__swiper {
+  z-index: -1;
+  @include absoluteBlock;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .swiper-slide {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+}

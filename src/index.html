@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="choices.min.css">
     <link rel="stylesheet" href="main.css">
     <script defer src="app.js"></script>
-    <script defer src="app-lib.js"></script>
     <title>SitDownPls</title>
 </head>
 <body>
@@ -53,8 +52,46 @@
             </div>
         </div>
         <div class="header__bottom">
-
+            <div class="container">
+                <div class="header__bottom-search">
+                    <label class="header__bottom-search__label" for="searchBar">
+                        <input class="header__bottom-searchbar" type="text" name="search" id="searchBar" placeholder="Я хочу купить...">
+                        <button class="header__bottom-search__btn" type="submit"><img src="images/arrow.svg" alt=""></button>
+                    </label>
+                    <label for="categoryChoice">
+                        <select name="categorySearch" id="categoryChoice">
+                            <option>Категория</option>
+                            <option>Категория2</option>
+                            <option>Категория3</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="header__bottom-personal">
+                    <a href="#" class="header__bottom-personal-link"><img src="images/user.svg" alt=""
+                                                                          class="header__bottom-personal-img"></a>
+                    <a href="#" class="header__bottom-personal__cart"><img src="images/cart.svg" alt=""
+                                                                           class="header__bottom-personal__cart-img"></a>
+                </div>
+            </div>
         </div>
     </header>
+
+    <section class="hero">
+        <div class="hero__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/herobg1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/herobg2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/herobg3.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="hero__title">
+                Скидка 15% на первую покупку
+            </h2>
+            <button class="hero__btn">Получить!</button>
+        </div>
+    </section>
 </body>
 </html>

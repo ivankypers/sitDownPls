@@ -2,6 +2,34 @@
 @import "mixin";
 @import "variables";
 @import "choices";
+@import "swiper";
 @import "header";
 
 
+.hero {
+  position: relative;
+  height: 400px;
+  padding: 80px 0;
+
+  .hero__title {
+    max-width: 496px;
+    color: $colorGrey;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 49px;
+  }
+
+  .hero__btn {
+    border: none;
+    padding: 22px 47px;
+    border-radius: 10px;
+    background: $colorPurple;
+    color: $colorWhite;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+  }
+}
