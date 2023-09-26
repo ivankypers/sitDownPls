@@ -109,6 +109,11 @@
         }
 
         .special__card-price {
+          color: $colorGrey;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%; /* 20.8px */
           text-decoration: line-through black;
         }
       }
@@ -134,5 +139,229 @@
 
 }
 
+.rated {
+  padding: 70px 0;
+
+  .rated__title {
+    @include sectionTitle;
+    margin-bottom: 26px;
+  }
+
+  .rated__card-wrap {
+    @include flexBox;
+    flex-wrap: wrap;
 
 
+    .rated__card {
+      @include productCard;
+      position: relative;
+      width: $rateProductWidth;
+
+      margin-bottom: $productGap;
+
+      .rate {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
+        background-image: url("images/star.svg");
+        background-repeat: no-repeat;
+        background-position: left 20%;
+        padding-left: 21px;
+
+        color: $colorOrange;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%; /* 20.8px */
+
+      }
+
+      .rated__card-img {
+        height: 105px;
+        align-self: center;
+        margin-bottom: 16px;
+      }
+
+      .rated__card-title {
+        @include productTitle;
+        margin-bottom: 24px;
+      }
+
+      .rated__card-price {
+        color: $colorGrey;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 20.8px */
+        margin-bottom: 24px;
+      }
+
+      .rated__card-btn-wrap {
+        @include flexBox;
+        justify-content: flex-start;
+
+        .rated__card-btn {
+          @include productBtn;
+        }
+      }
+
+      &:not(:nth-child(4n)) {
+        margin-right: $productGap;
+      }
+
+      }
+    }
+
+  .rated__btn-wrap {
+    @include flexBox;
+    justify-content: center;
+
+    .rated__btn {
+      @include productBtn;
+      background-color: $colorPurple;
+      color: $colorWhite;
+    }
+  }
+
+
+
+
+}
+
+.collection {
+  padding: 150px 0;
+  background-image: url("images/newcollectionbg.jpg");
+
+  .collection__title {
+    color: $colorGold;
+    font-family: Playfair Display, sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%; /* 72px */
+  }
+
+  .collection__subtitle {
+    max-width: 508px;
+    color: $colorWhite;
+    font-family: Open Sans, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 49px;
+  }
+
+  .collection__btn-wrap {
+    @include flexBox;
+    justify-content: flex-start;
+
+    .collection__btn {
+      @include productBtn;
+      background-color: $colorPurple;
+      color: $colorWhite;
+
+    }
+  }
+}
+
+.category {
+  padding: 70px 0;
+
+  .category__title {
+    color: $colorBlack;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 32px */
+    margin-bottom: 26px;
+  }
+
+  .category__card-wrap {
+    @include flexBox;
+    flex-wrap: wrap;
+  }
+
+  .category__card {
+    width: calc((100% - ($productGap * 2)) / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include productCard;
+    position: relative;
+    padding: 30px;
+    margin-bottom: $productGap;
+
+
+
+    .category__card-tabs {
+      @include flexBox;
+      margin-bottom: 14px;
+
+      .category__card-tab {
+        color: $colorGrey;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 100%; /* 14px */
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+
+    }
+
+    .category__card-title {
+      color: $colorBlack;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 30px;
+    }
+
+
+    .cartegory__card-img {
+      margin-left: -30px;
+      margin-bottom: 30px;
+
+    }
+
+
+    .category__card-link {
+      display: flex;
+      align-items: center;
+      color: $colorPurple;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 120%; /* 19.2px */
+
+      & span {
+        margin-right: 5px;
+      }
+    }
+
+    .category__card-link__img {
+      width: 22px;
+      height: 22px;
+    }
+
+
+    &:not(:last-child) {
+      margin-right: $productGap;
+    }
+  }
+
+
+  .category__card-exp {
+    width: calc((100% - ($productGap * 1)) / 2);
+  }
+
+}
+
+.blog {
+  padding-bottom: 70px;
+
+  .blog__title {
+    @include sectionTitle;
+  }
+}

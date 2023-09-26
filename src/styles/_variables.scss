@@ -1,10 +1,14 @@
 $containerWidth: 1280px;
 
+
 $colorOrange: #FF862F;
 $colorPurple: #A65CF0;
 $colorBlack: #333333;
 $colorWhite: #FFFFFF;
 $colorGrey: #999999;
 $colorGreyLight: #F6F6F6;
+$colorGold: #D5B986;
 
 $productGap: 32px;
+
+$rateProductWidth: calc((100% - ($productGap * 3)) / 4);
