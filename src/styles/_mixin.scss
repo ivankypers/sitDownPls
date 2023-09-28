@@ -36,6 +36,26 @@
   font-weight: 600;
   line-height: 100%; /* 16px */
   padding: 19px 35px;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+
+  &:focus-visible {
+    border: 2px solid $colorPurple;
+    background: $colorPurpleLight;
+    color: $colorWhite;
+  }
+
+  &:hover {
+    background: $colorPurple;
+    color: $colorWhite;
+  }
+
+  &:active {
+    background: $colorPurpleShade;
+    border-color: $colorPurpleShade;
+  }
+
+
 }
 
 @mixin productTitle {
