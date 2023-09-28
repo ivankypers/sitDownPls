@@ -68,3 +68,41 @@
     }
   }
 }
+
+.blog__swiper {
+  position: relative;
+
+  .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: -50px;
+    transform: rotate(180deg);
+
+
+
+  }
+  .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    content: '';
+    position: absolute;
+    right: 47px;
+    top: -50px;
+
+
+  }
+
+  .swiper-button__available {
+    & svg {
+      circle {
+        stroke: $colorPurple;
+      }
+      path {
+        stroke: $colorPurple;
+      }
+    }
+  }
+}
