@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixin";
+@import "presets/variables";
+@import "presets/mixin";
 
 .header__upper {
   justify-content: space-between;
@@ -37,9 +37,25 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 100%; /* 14px */
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
 
-      & img {
+      & svg {
         margin-right: 5px;
+        transition: fill .2s ease-in-out;
+      }
+
+      &:focus-visible {
+        background: $colorOrangeLight;
+      }
+
+      &:hover {
+        color: $colorOrangeLight;
+
+        & svg {
+          path {
+            fill: $colorOrangeLight;
+          }
+        }
       }
     }
   }
@@ -60,6 +76,19 @@
         font-style: normal;
         font-weight: 400;
         line-height: 100%; /* 14px */
+        transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+        &:focus-visible {
+          background: var(--pink_violet, #EBD1FF);
+        }
+
+        &:hover {
+          color: $colorPurpleLight;
+        }
+
+        &:active {
+          color: $colorPurpleShade;
+        }
       }
     }
   }
@@ -117,8 +146,15 @@
       background: $colorGreyLight;
 
       .header__bottom-searchbar {
+        width: 50%;
+        height: 100%;
         border: none;
         background: transparent;
+
+        &:focus-visible {
+          outline: none;
+          border-bottom: 1px solid $colorBlack;
+        }
       }
     }
 
@@ -132,8 +168,16 @@
   .header__bottom-personal {
     @include flexBox;
 
+
     .header__bottom-personal-link {
       margin-right: 32px;
+    }
+
+    & svg:hover {
+      transition: fill .2s ease-in-out;
+      path {
+        fill: $colorPurpleLight;
+      }
     }
   }
 }

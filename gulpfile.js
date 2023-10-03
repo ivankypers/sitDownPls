@@ -47,6 +47,21 @@ const styles = () => {
         .pipe(browserSync.stream())
 }
 
+const filterStyles = () => {
+    return src('src/styles/filters.css')
+        .pipe(development(sourcemaps.init()))
+        .pipe(concat('filters.css'))
+        .pipe(autoprefixes({
+            cascade: false,
+        }))
+        .pipe(cleanCss({
+            level: 2,
+        }))
+        .pipe(development(sourcemaps.write()))
+        .pipe(dest('dist'))
+        .pipe(browserSync.stream())
+}
+
 const scripts = () => {
     return src([
         'src/js/components/**/*.js',
@@ -91,4 +106,4 @@ watch('src/**/*.html', htmlMinify)
 watch("src/**/*.css", styles)
 watch('src/js/**/*.js', scripts)
 
-exports.default = series(clean, htmlMinify, styles, scripts, images, watchFiles)
+exports.default = series(clean, htmlMinify, styles, filterStyles, scripts, images, watchFiles)

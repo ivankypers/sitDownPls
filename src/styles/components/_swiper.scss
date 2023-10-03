@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixin";
+@import "../presets/variables";
+@import "../presets/mixin";
 
 .hero__swiper {
   @include absoluteBlock;

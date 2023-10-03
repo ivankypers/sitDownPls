@@ -1,4 +1,4 @@
-@import "variables";
+@import "../presets/variables";
 
 .header__upper-geo {
   .choices[data-type*=select-one]::after {
@@ -81,12 +81,26 @@
       background: var(--white, #FFF);
       min-height: initial;
       padding: 19px 0 19px 32px;
+      transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
 
       .choices__item {
         color: $colorPurple;
         font-size: 16px;
         font-weight: 400;
         line-height: 120%; /* 19.2px */
+      }
+
+      &:focus-visible {
+        border: 2px solid $colorPurpleLight;;
+        background: $colorPinkLight;
+      }
+
+      &:hover {
+        border: 2px solid $colorPurpleLight;
+      }
+
+      &:active {
+        border: 2px solid $colorPurpleShade;
       }
     }
 

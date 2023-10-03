@@ -1,0 +1,54 @@
+@import "presets/variables";
+@import "presets/mixin";
+
+.filters {
+  .container {
+    @include flexCol;
+    max-width: 296px;
+  }
+
+  .filters__title {
+    color: $colorBlack;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+    margin-bottom: 20px;
+  }
+}
+
+.main__filter-category {
+  @include flexCol;
+
+  & h3 {
+    color: $colorGreyShade;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 20.8px */
+    margin-bottom: 9px;
+  }
+}
+
+.main__filter-label {
+  color: $colorGreyShade;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+
+  &:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}
+
+.progress-bar {
+
+}
+
+
+
+
+
+
+

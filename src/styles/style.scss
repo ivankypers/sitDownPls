@@ -1,9 +1,10 @@
-@import "settings";
-@import "mixin";
-@import "variables";
-@import "choices";
-@import "swiper";
+@import "presets/settings";
+@import "presets/mixin";
+@import "presets/variables";
+@import "components/choices";
+@import "components/swiper";
 @import "header";
+@import "presets/breadcrumbs";
 
 
 .hero {
@@ -37,6 +38,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 100%; /* 16px */
+    @include moreBtnUx;
   }
 }
 
@@ -220,6 +222,7 @@
       @include productBtn;
       background-color: $colorPurple;
       color: $colorWhite;
+      @include moreBtnUx;
     }
   }
 
@@ -260,6 +263,7 @@
       @include productBtn;
       background-color: $colorPurple;
       color: $colorWhite;
+      @include moreBtnUx;
 
     }
   }
@@ -334,10 +338,17 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 120%; /* 19.2px */
+      transition: border .2s ease-in-out;
 
       & span {
         margin-right: 5px;
+
+        &:hover {
+          border-bottom: 2px solid $colorPurple;
+        }
       }
+
+
     }
 
     .category__card-link__img {
@@ -467,6 +478,7 @@
       background: $colorPurple;
       color: $colorWhite;
       margin-bottom: 12px;
+      @include moreBtnUx;
     }
   }
 }
@@ -537,3 +549,11 @@
   font-weight: 400;
   line-height: normal;
 }
+
+
+/************************************************************************************************************************************************************/
+
+
+
+
+

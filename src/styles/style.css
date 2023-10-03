@@ -404,12 +404,23 @@ a {
   background: var(--white, #FFF);
   min-height: initial;
   padding: 19px 0 19px 32px;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .header__bottom-search .choices[data-type*=select-one] .choices__inner .choices__item {
   color: #A65CF0;
   font-size: 16px;
   font-weight: 400;
   line-height: 120%; /* 19.2px */
+}
+.header__bottom-search .choices[data-type*=select-one] .choices__inner:focus-visible {
+  border: 2px solid #C998FB;
+  background: #F8EFFF;
+}
+.header__bottom-search .choices[data-type*=select-one] .choices__inner:hover {
+  border: 2px solid #C998FB;
+}
+.header__bottom-search .choices[data-type*=select-one] .choices__inner:active {
+  border: 2px solid #7033AC;
 }
 .header__bottom-search .choices__item {
   color: #333333;
@@ -550,9 +561,20 @@ a {
   font-size: 14px;
   font-weight: 400;
   line-height: 100%; /* 14px */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-.header__upper .header__upper-geo .header__upper-phone img {
+.header__upper .header__upper-geo .header__upper-phone svg {
   margin-right: 5px;
+  transition: fill 0.2s ease-in-out;
+}
+.header__upper .header__upper-geo .header__upper-phone:focus-visible {
+  background: #FFBD59;
+}
+.header__upper .header__upper-geo .header__upper-phone:hover {
+  color: #FFBD59;
+}
+.header__upper .header__upper-geo .header__upper-phone:hover svg path {
+  fill: #FFBD59;
 }
 .header__upper .header__upper-nav .header__upper-nav__list {
   display: flex;
@@ -567,6 +589,16 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 14px */
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.header__upper .header__upper-nav .header__upper-nav__list .header__upper-nav__link:focus-visible {
+  background: var(--pink_violet, #EBD1FF);
+}
+.header__upper .header__upper-nav .header__upper-nav__list .header__upper-nav__link:hover {
+  color: #C998FB;
+}
+.header__upper .header__upper-nav .header__upper-nav__list .header__upper-nav__link:active {
+  color: #7033AC;
 }
 
 .header__middle {
@@ -614,8 +646,14 @@ a {
   background: #F6F6F6;
 }
 .header__bottom .header__bottom-search .header__bottom-search__label .header__bottom-searchbar {
+  width: 50%;
+  height: 100%;
   border: none;
   background: transparent;
+}
+.header__bottom .header__bottom-search .header__bottom-search__label .header__bottom-searchbar:focus-visible {
+  outline: none;
+  border-bottom: 1px solid #333333;
 }
 .header__bottom .header__bottom-search .header__bottom-search__btn {
   border: none;
@@ -627,6 +665,38 @@ a {
 }
 .header__bottom .header__bottom-personal .header__bottom-personal-link {
   margin-right: 32px;
+}
+.header__bottom .header__bottom-personal svg:hover {
+  transition: fill 0.2s ease-in-out;
+}
+.header__bottom .header__bottom-personal svg:hover path {
+  fill: #C998FB;
+}
+
+.breadcrumb {
+  padding-bottom: 32px;
+}
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb ul li {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  transition: color 0.2s ease-in-out;
+}
+.breadcrumb ul li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "/";
+}
+.breadcrumb ul li:active {
+  color: #7033AC;
 }
 
 .hero {
@@ -658,6 +728,13 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 16px */
+  transition: background-color 0.2s ease-in-out;
+}
+.hero .hero__btn:hover {
+  background-color: #C998FB;
+}
+.hero .hero__btn:active {
+  background-color: #7033AC;
 }
 
 .special {
@@ -879,6 +956,7 @@ a {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   background-color: #A65CF0;
   color: #FFFFFF;
+  transition: background-color 0.2s ease-in-out;
 }
 .rated .rated__btn-wrap .rated__btn:focus-visible {
   border: 2px solid #A65CF0;
@@ -892,6 +970,12 @@ a {
 .rated .rated__btn-wrap .rated__btn:active {
   background: #7033AC;
   border-color: #7033AC;
+}
+.rated .rated__btn-wrap .rated__btn:hover {
+  background-color: #C998FB;
+}
+.rated .rated__btn-wrap .rated__btn:active {
+  background-color: #7033AC;
 }
 
 .collection {
@@ -935,6 +1019,7 @@ a {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   background-color: #A65CF0;
   color: #FFFFFF;
+  transition: background-color 0.2s ease-in-out;
 }
 .collection .collection__btn-wrap .collection__btn:focus-visible {
   border: 2px solid #A65CF0;
@@ -948,6 +1033,12 @@ a {
 .collection .collection__btn-wrap .collection__btn:active {
   background: #7033AC;
   border-color: #7033AC;
+}
+.collection .collection__btn-wrap .collection__btn:hover {
+  background-color: #C998FB;
+}
+.collection .collection__btn-wrap .collection__btn:active {
+  background-color: #7033AC;
 }
 
 .category {
@@ -1010,9 +1101,13 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 120%; /* 19.2px */
+  transition: border 0.2s ease-in-out;
 }
 .category .category__card .category__card-link span {
   margin-right: 5px;
+}
+.category .category__card .category__card-link span:hover {
+  border-bottom: 2px solid #A65CF0;
 }
 .category .category__card .category__card-link__img {
   width: 22px;
@@ -1157,6 +1252,7 @@ a {
   background: #A65CF0;
   color: #FFFFFF;
   margin-bottom: 12px;
+  transition: background-color 0.2s ease-in-out;
 }
 .feedback .feedback__form .form__btn:focus-visible {
   border: 2px solid #A65CF0;
@@ -1170,6 +1266,12 @@ a {
 .feedback .feedback__form .form__btn:active {
   background: #7033AC;
   border-color: #7033AC;
+}
+.feedback .feedback__form .form__btn:hover {
+  background-color: #C998FB;
+}
+.feedback .feedback__form .form__btn:active {
+  background-color: #7033AC;
 }
 
 .footer {
@@ -1230,5 +1332,7 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+
+/************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=style.css.map */
