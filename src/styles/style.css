@@ -773,7 +773,7 @@ a {
   position: absolute;
   top: 30px;
   left: 0;
-  background-image: url("images/discountbg.svg");
+  background-image: url("../images/discountbg.svg");
   background-repeat: no-repeat;
   background-position: right;
   color: #FFFFFF;
@@ -874,7 +874,7 @@ a {
   position: absolute;
   top: 30px;
   left: 30px;
-  background-image: url("images/star.svg");
+  background-image: url("../images/star.svg");
   background-repeat: no-repeat;
   background-position: left 20%;
   padding-left: 21px;
@@ -980,7 +980,7 @@ a {
 
 .collection {
   padding: 150px 0;
-  background-image: url("images/newcollectionbg.jpg");
+  background-image: url("../images/newcollectionbg.jpg");
 }
 .collection .collection__title {
   color: #D5B986;

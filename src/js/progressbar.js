@@ -1,7 +1,14 @@
-const slider = document.querySelector('.price-progressbar');
-const progressBar = document.querySelector('.progress-bar');
+/*
+const progressBarMin = document.getElementById('.price-progressbar-min');
+const progressBarMax = document.getElementById('.price-progressbar-max');
 const minPrice = document.querySelector('.progressbar-min')
+const maxPrice = document.querySelector('.progressbar-max')
 
-slider.addEventListener('input', () => {
-    minPrice.textContent = slider.value
-});
+progressBarMin.addEventListener("input", () => {
+    minPrice.textContent = progressBarMin.value;
+})
+
+progressBarMax.addEventListener("input", () => {
+    maxPrice.textContent = progressBarMax.value;
+})
+*/

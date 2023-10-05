@@ -1,4 +1,4 @@
-const headerUpperChoices = document.querySelector('select');
+const headerUpperChoices = document.getElementById('headerRegion');
 const choicesUpper = new Choices(headerUpperChoices, {
     placeholder: false,
     itemSelectText: '',
