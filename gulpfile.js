@@ -62,10 +62,10 @@ const libStyles = () => {
         .pipe(browserSync.stream())
 }
 
-const filterStyles = () => {
-    return src('src/styles/filters.css')
+const pageStyles = () => {
+    return src('src/styles/page-styles/**/*.css')
         .pipe(development(sourcemaps.init()))
-        .pipe(concat('filters.css'))
+        .pipe(concat('catalog.css'))
         .pipe(autoprefixes({
             cascade: false,
         }))
@@ -149,8 +149,8 @@ const watchFiles = () => {
 
 watch('src/**/*.html', htmlMinify)
 watch("src/**/*.css", styles)
-watch("src/**/*.css", filterStyles)
+watch("src/**/*.css", pageStyles)
 watch('src/js/**/*.js', scripts)
 
 
-exports.default = series(clean, htmlMinify, styles, libStyles, filterStyles, libScriptAssets, libScripts, scripts, images, watchFiles)
+exports.default = series(clean, htmlMinify, styles, libStyles, pageStyles, libScriptAssets, libScripts, scripts, images, watchFiles)

@@ -1,10 +1,37 @@
-@import "presets/variables";
-@import "presets/mixin";
+@import "../presets/variables";
+@import "../presets/mixin";
 
-.filters {
-  .container {
+.main {
+
+  .rated {
+    padding: 0;
+  }
+
+  .main__container {
+    display: flex;
+  }
+
+  .catalog__container {
+
+    .rated__card {
+      width: calc((100% - ($productGap * 2)) / 3);
+
+
+      &:not(:nth-child(4n)) {
+        margin-right: 0;
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: $productGap;
+      }
+    }
+
+  }
+
+  .filters__aside {
     @include flexCol;
     max-width: 296px;
+    margin-right: 32px;
   }
 
   .filters__title {
@@ -15,12 +42,13 @@
     line-height: 130%; /* 23.4px */
     margin-bottom: 20px;
   }
-}
 
-.main__filter-category {
-  @include flexCol;
+  .filter__section {
+    @include flexCol;
+    margin-bottom: 27px;
+  }
 
-  & h3 {
+  .main__filter-section-title {
     color: $colorGreyShade;
     font-size: 16px;
     font-style: normal;
@@ -28,27 +56,52 @@
     line-height: 130%; /* 20.8px */
     margin-bottom: 9px;
   }
+
+  .main__filter-label {
+    color: $colorGreyShade;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 20.8px */
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+
+    .main__filter-color {
+      margin-bottom: 88px;
+    }
+  }
 }
 
-.main__filter-label {
-  color: $colorGreyShade;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%; /* 20.8px */
 
-  &:not(:last-child) {
-    margin-bottom: 11px;
+
+
+.progress__container {
+  .wrap {
+    @include flexBox;
+    margin-bottom: 40px;
+
+    .progressbar-price-wrap {
+      & span {
+        padding: 4px 17px;
+        border: 2px solid $colorGrey;
+        color: $colorGreyShade;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 20.8px */
+      }
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
   }
 }
 
 .progress-bars {
-  width: 400px;
-
-}
-
-#progress-bar-min {
-  position: absolute;
+  max-width: 296px;
 }
 
 .field input{
@@ -103,7 +156,7 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="range"]::-webkit-slider-thumb{
   height: 13px;
   width: 13px;
-  background-image: url("../images/progressbarpck.svg");
+  background-image: url("../../images/progressbarpck.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
