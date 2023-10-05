@@ -149,6 +149,7 @@ const watchFiles = () => {
 
 watch('src/**/*.html', htmlMinify)
 watch("src/**/*.css", styles)
+watch("src/**/*.css", filterStyles)
 watch('src/js/**/*.js', scripts)
 
 
